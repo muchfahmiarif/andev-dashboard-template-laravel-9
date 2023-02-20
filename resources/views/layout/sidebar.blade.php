@@ -19,28 +19,57 @@
         </a>
       </li>
       <li class="nav-item nav-category">Report Analysis</li>
-      <li class="nav-item {{ active_class(['report-analysis/*']) }}">
-        <a class="nav-link" data-bs-toggle="collapse" href="#report-analysis" role="button" aria-expanded="{{ is_active_route(['report-analysis/*']) }}" aria-controls="report-analysis">
-          <i class="link-icon" data-feather="mail"></i>
+      <li class="nav-item {{ active_class(['data-analysis/*']) }}">
+        <a class="nav-link" data-bs-toggle="collapse" href="#data-analysis" role="button" aria-expanded="{{ is_active_route(['data-analysis/*']) }}" aria-controls="data-analysis">
+          <i class="link-icon" data-feather="bookmark"></i>
           <span class="link-title">Data Analysis</span>
           <i class="link-arrow" data-feather="chevron-down"></i>
         </a>
-        <div class="collapse {{ show_class(['report-analysis/*']) }}" id="report-analysis">
+        <div class="collapse {{ show_class(['data-analysis/*']) }}" id="data-analysis">
           <ul class="nav sub-menu">
             <li class="nav-item">
-              <a href="{{ url('/report-analysis/finish-good') }}" class="nav-link {{ active_class(['report-analysis/finish-good']) }}">Finish Good</a>
+              <a href="{{ url('/data-analysis/finish-good') }}" class="nav-link {{ active_class(['data-analysis/finish-good']) }}">Finish Good</a>
             </li>
             <li class="nav-item">
-              <a href="{{ url('/report-analysis/stabilita') }}" class="nav-link {{ active_class(['report-analysis/stabilita']) }}">Stabilita</a>
+              <a href="{{ url('/data-analysis/stabilita') }}" class="nav-link {{ active_class(['data-analysis/stabilita']) }}">Stabilita</a>
             </li>
             <li class="nav-item">
-              <a href="{{ url('/report-analysis/raw-material') }}" class="nav-link {{ active_class(['report-analysis/raw-material']) }}">Raw Material</a>
+              <a href="{{ url('/data-analysis/raw-material') }}" class="nav-link {{ active_class(['data-analysis/raw-material']) }}">Raw Material</a>
             </li>
             <li class="nav-item">
-              <a href="{{ url('/report-analysis/mikrobiologi') }}" class="nav-link {{ active_class(['report-analysis/mikrobiologi']) }}">Mikrobiologi</a>
+              <a href="{{ url('/data-analysis/mikrobiologi') }}" class="nav-link {{ active_class(['data-analysis/mikrobiologi']) }}">Mikrobiologi</a>
             </li>
           </ul>
         </div>
+      </li>
+      <li class="nav-item {{ active_class(['research/*']) }}">
+        <a class="nav-link" data-bs-toggle="collapse" href="#research" role="button" aria-expanded="{{ is_active_route(['research/*']) }}" aria-controls="research">
+          <i class="link-icon" data-feather="bookmark"></i>
+          <span class="link-title">Data Analysis</span>
+          <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+        <div class="collapse {{ show_class(['data-analysis/*']) }}" id="data-analysis">
+          <ul class="nav sub-menu">
+            <li class="nav-item">
+              <a href="{{ url('/data-analysis/finish-good') }}" class="nav-link {{ active_class(['data-analysis/finish-good']) }}">Finish Good</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/data-analysis/stabilita') }}" class="nav-link {{ active_class(['data-analysis/stabilita']) }}">Stabilita</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/data-analysis/raw-material') }}" class="nav-link {{ active_class(['data-analysis/raw-material']) }}">Raw Material</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/data-analysis/mikrobiologi') }}" class="nav-link {{ active_class(['data-analysis/mikrobiologi']) }}">Mikrobiologi</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item {{ active_class(['research/journey-research']) }}">
+        <a href="{{ url('/research/journey-research') }}" class="nav-link">
+          <i class="link-icon" data-feather="book"></i>
+          <span class="link-title">Journey of Research</span>
+        </a>
       </li>
       <li class="nav-item nav-category">web apps</li>
       <li class="nav-item {{ active_class(['email/*']) }}">
