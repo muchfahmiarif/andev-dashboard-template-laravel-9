@@ -1,7 +1,7 @@
 <nav class="sidebar">
   <div class="sidebar-header">
     <a href="#" class="sidebar-brand">
-      Noble<span>UI</span>
+      Andev <span>Dash</span>
     </a>
     <div class="sidebar-toggler not-active">
       <span></span>
@@ -17,6 +17,30 @@
           <i class="link-icon" data-feather="box"></i>
           <span class="link-title">Dashboard</span>
         </a>
+      </li>
+      <li class="nav-item nav-category">Report Analysis</li>
+      <li class="nav-item {{ active_class(['report-analysis/*']) }}">
+        <a class="nav-link" data-bs-toggle="collapse" href="#report-analysis" role="button" aria-expanded="{{ is_active_route(['report-analysis/*']) }}" aria-controls="report-analysis">
+          <i class="link-icon" data-feather="mail"></i>
+          <span class="link-title">Data Analysis</span>
+          <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+        <div class="collapse {{ show_class(['report-analysis/*']) }}" id="report-analysis">
+          <ul class="nav sub-menu">
+            <li class="nav-item">
+              <a href="{{ url('/report-analysis/finish-good') }}" class="nav-link {{ active_class(['report-analysis/finish-good']) }}">Finish Good</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/report-analysis/stabilita') }}" class="nav-link {{ active_class(['report-analysis/stabilita']) }}">Stabilita</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/report-analysis/raw-material') }}" class="nav-link {{ active_class(['report-analysis/raw-material']) }}">Raw Material</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/report-analysis/mikrobiologi') }}" class="nav-link {{ active_class(['report-analysis/mikrobiologi']) }}">Mikrobiologi</a>
+            </li>
+          </ul>
+        </div>
       </li>
       <li class="nav-item nav-category">web apps</li>
       <li class="nav-item {{ active_class(['email/*']) }}">
@@ -310,37 +334,5 @@
         </a>
       </li>
     </ul>
-  </div>
-</nav>
-<nav class="settings-sidebar">
-  <div class="sidebar-body">
-    <a href="#" class="settings-sidebar-toggler">
-      <i data-feather="settings"></i>
-    </a>
-    <h6 class="text-muted mb-2">Sidebar:</h6>
-    <div class="mb-3 pb-3 border-bottom">
-      <div class="form-check form-check-inline">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarLight" value="sidebar-light" checked>
-          Light
-        </label>
-      </div>
-      <div class="form-check form-check-inline">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarDark" value="sidebar-dark">
-          Dark
-        </label>
-      </div>
-    </div>
-    <div class="theme-wrapper">
-      <h6 class="text-muted mb-2">Light Version:</h6>
-      <a class="theme-item active" href="https://www.nobleui.com/laravel/template/demo1/">
-        <img src="{{ url('assets/images/screenshots/light.jpg') }}" alt="light version">
-      </a>
-      <h6 class="text-muted mb-2">Dark Version:</h6>
-      <a class="theme-item" href="https://www.nobleui.com/laravel/template/demo2/">
-        <img src="{{ url('assets/images/screenshots/dark.jpg') }}" alt="light version">
-      </a>
-    </div>
   </div>
 </nav>
