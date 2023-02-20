@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::group(['prefix' => 'report-analysis'], function () {
+    Route::get('finish-good', function () { return view('pages.report-analysis.finish-good'); });
+    Route::get('raw-material', function () { return view('pages.report-analysis.raw-material'); });
+    Route::get('stabilita', function () { return view('pages.report-analysis.stabilita'); });
+    Route::get('mikrobiologi', function () { return view('pages.report-analysis.mikrobiologi'); });
+});
+
 Route::group(['prefix' => 'email'], function(){
     Route::get('inbox', function () { return view('pages.email.inbox'); });
     Route::get('read', function () { return view('pages.email.read'); });
